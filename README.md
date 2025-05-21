@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# 🌗 React Theme Toggle App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React + Vite + TypeScript application that demonstrates light/dark theme toggling using the `useContext` hook. It uses placeholder `Lorem Ipsum` content to show styling differences between themes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ⚛️ React + Vite + TypeScript
+- 🎨 Light / Dark Theme Toggle
+- 🧠 Global state management via `useContext`
+- 💡 Clean, minimal UI with sample text content
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📸 Demo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Toggle between light and dark mode using the button. The theme applies globally and updates in real-time.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📁 Project Structure
+src/
+├── hooks/ 
+│ └── useTheme.tsx # to consume theme state in app
+├── context/
+│ └── ThemeContext.tsx # Context to manage theme state
+├── App.tsx # showed basic usage of theme context
+├── App.css 
+├── main.tsx # entry point
+└── index.css
+
+
+---
+
+## 🛠️ Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/PrayuktaAwati/react-theme-demo.git
+
+# Navigate to the folder
+cd react-theme-demo
+
+# Install dependencies
+npm install
+
+# Run the dev server
+npm run dev
